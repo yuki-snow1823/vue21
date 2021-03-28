@@ -22,9 +22,11 @@
 <script>
 import Vue from 'vue';
 
-// vueを拡張
 export default Vue.extend({
-  data: function() { return { editable: false } },
+  props: ['user'],
+  data: function() {
+    return { editable: false };
+  },
   methods: {
     edit: function() {
       this.editable = true;
@@ -34,6 +36,6 @@ export default Vue.extend({
       });
     },
   },
-  props: ["user"],
 });
 </script>
+
