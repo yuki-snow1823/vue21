@@ -1,0 +1,4 @@
+.col-3 {
+  flex-basis: 25%;
+  max-width: 25%;
+}

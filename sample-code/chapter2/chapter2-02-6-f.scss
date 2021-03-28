@@ -1,0 +1,14 @@
+.button {
+  font-size: 1.0rem;
+  line-height: 1.5rem;
+}
+.primary-button {
+  @extend .button;
+  background-color: #1976D2;
+  color: #fff;
+}
+.accent-button {
+  @extend .button;
+  background-color: #ff4081;
+  color: #fff;
+}

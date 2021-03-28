@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<title>データの入力</title>
+<style>
+  .input-container {
+    display: grid;
+    grid-template-rows: 200px 50px;
+    grid-template-columns: 300px 300px;
+    grid-template-areas:
+      "inputArea";
+    grid-gap: 10px;
+  }
+  .inputArea {
+    grid-area: inputArea;
+    display: grid;
+  }
+</style>
+<div id="app">
+  <div class="input-container">
+    <form class="inputArea">
+      <p>ユーザー登録</p>
+      <label>ニックネーム</label>
+      <input v-model="nickname">
+      <label>メールアドレス</label>
+      <input v-model="email">
+    </form>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@3.0.0/dist/vue.global.js"></script>
+<script>
+  const app = Vue.createApp({
+    data: () => ({
+      nickname: '',
+      email: '',
+    }),
+  });
+  app.mount('#app');
+</script>

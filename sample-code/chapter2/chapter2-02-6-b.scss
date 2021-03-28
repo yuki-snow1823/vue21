@@ -1,0 +1,6 @@
+$grid-columns: 12;
+
+.col-3 {
+  flex-basis: 100% / $split-grid * 3;
+  max-width: 100% / $split-grid * 3;
+}
