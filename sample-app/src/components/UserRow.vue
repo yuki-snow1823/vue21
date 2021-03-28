@@ -22,6 +22,7 @@
 <script>
 import Vue from 'vue';
 
+// vueを拡張
 export default Vue.extend({
   data: function() { return { editable: false } },
   methods: {
