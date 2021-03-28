@@ -13,17 +13,21 @@
   </tr>
 </template>
 
-<style >
-  td input {
-    width: 95%;
-  }
-</style>
-
 <script>
 import Vue from 'vue';
 
+export function User(nickname, email) {
+  this.nickname = nickname;
+  this.email = email;
+}
+
 export default Vue.extend({
-  props: ['user'],
+  props: {
+    user: {
+      type: User,
+      required: true,
+    },
+  },
   data: function() {
     return { editable: false };
   },
@@ -39,3 +43,8 @@ export default Vue.extend({
 });
 </script>
 
+<style module>
+td input {
+  width: 95%;
+}
+</style>
