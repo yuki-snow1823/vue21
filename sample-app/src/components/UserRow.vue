@@ -13,32 +13,16 @@
   </tr>
 </template>
 
-<script>
-import Vue from 'vue';
+<script> 
+import { defineComponent, ref } from '@vue/composition-api';
 
-export function User(nickname, email) {
-  this.nickname = nickname;
-  this.email = email;
-}
+export default defineComponent({
+  setup() {
+    const editable = ref(false);
 
-export default Vue.extend({
-  props: {
-    user: {
-      type: User,
-      required: true,
-    },
-  },
-  data: function() {
-    return { editable: false };
-  },
-  methods: {
-    edit: function() {
-      this.editable = true;
-      this.$nextTick(() => {
-        // DOM更新後に実行
-        this.$refs.editNickname.focus();
-      });
-    },
+    return {
+      editable,
+    };
   },
 });
 </script>
